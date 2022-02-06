@@ -158,8 +158,8 @@ fn interaction_system(
         continue;
       }
       // TODO: use bounding_mesh
-      let relative_cursor_position = (cursor_position - global_transform.translation.truncate())
-        / global_transform.scale.truncate();
+      let relative_cursor_position = (cursor_position - global_transform.translation.truncate());
+
       if (interactable.bounding_box.0.x..interactable.bounding_box.1.x)
         .contains(&relative_cursor_position.x)
         && (interactable.bounding_box.0.y..interactable.bounding_box.1.y)
